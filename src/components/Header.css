@@ -1,0 +1,30 @@
+.header-banner {
+  background-color: var(--dark-color);
+}
+
+.header-banner {
+  padding: 10px 0;
+}
+
+.header-body-container {
+  max-width: var(--body-width);
+  margin: 0 auto;
+}
+
+.header-title {
+  color: var(--light-color);
+}
+
+.header-title {
+  text-transform: uppercase;
+}
+
+.header-span-title {
+  color: var(--accent-color)
+}
+
+@media screen and (width < 500px) {
+  .header-body-container {
+    padding-left: 2rem;
+  }
+}
