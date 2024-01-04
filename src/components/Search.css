@@ -1,0 +1,8 @@
+.searchbar-container {
+  width: 100%;
+}
+
+.search-results {
+  height: 10rem;
+  overflow: scroll;
+}

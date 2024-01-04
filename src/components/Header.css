@@ -9,6 +9,7 @@
 .header-body-container {
   max-width: var(--body-width);
   margin: 0 auto;
+  text-align: center;
 }
 
 .header-title {
@@ -19,12 +20,10 @@
   text-transform: uppercase;
 }
 
-.header-span-title {
-  color: var(--accent-color)
+.header-link {
+  text-decoration: none;
 }
 
-@media screen and (width < 500px) {
-  .header-body-container {
-    padding-left: 2rem;
-  }
+.header-span-title {
+  color: var(--accent-color)
 }

@@ -1,3 +1,11 @@
 .app-main-container {
   max-width: var(--body-width);
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+@media screen and (width < 525px) {
+  .app-main-container {
+    padding: 10px;
+  }
 }
