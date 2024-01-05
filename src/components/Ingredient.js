@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
+
+import Card from "./Card";
 
 function Ingredient() {
   const { name } = useParams();
@@ -30,13 +32,11 @@ function Ingredient() {
       {
         meals.map(meal => {
           return (
-            <Link 
+            <Card 
               key={meal.id}
               to={`/meal/${meal.id}`}
-            >
-              <img src={meal.image} />
-              <p>{meal.str}</p>
-            </Link>
+              item={meal}
+            />
           );
         })
       }

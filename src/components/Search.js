@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+
+import Card from './Card';
+
 import './Search.css';
 
 function Search() {
@@ -55,10 +58,6 @@ function Search() {
     setFilteredData(filtered);
   };
 
-  const handleIngredientSelect = (item) => {
-    setSearchTerm(item.str);
-  }
-
   return (
     <div className='searchbar-container'>
       <h2>Search by an ingredient</h2>
@@ -66,15 +65,13 @@ function Search() {
         placeholder='Search by ingredients...' 
         value={searchTerm} 
         onChange={handleSearch}
+        className='search-bar'
       />
       <ul className='search-results'>
         {
           filteredData.map(item => {
             return (
-              <li 
-                key={item.id}
-                onClick={() => handleIngredientSelect(item)}
-              >
+              <li key={item.id}>
                 <Link to={`/ingredient/${item.str.replace(' ', '_')}`}>{item.str}</Link>
               </li>
             );
@@ -85,13 +82,10 @@ function Search() {
       {
         categories.map(item => {
           return (
-            <Link 
-              key={item.id}
+            <Card 
               to={`/category/${item.str}`}
-            >
-              <img src={item.image} />
-              <span>{item.str}</span>
-            </Link>
+              item={item}
+            />
           );
         })
       }
