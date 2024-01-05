@@ -1,0 +1,22 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-container {
+  padding: 25px 0;
+}
+
+.card-image {
+  max-width: 50%;
+  border-radius: 50%;
+}
+
+.card-title {
+  color: var(--dark-color);
+}
+
+.card-title > h3 {
+  padding-left: 25px;
+}
