@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { Route, RouterProvider, createHashRouter, createRoutesFromElements } from 'react-router-dom';
 
 import './index.css';
 
@@ -13,7 +13,7 @@ import Error from './components/Error';
 import reportWebVitals from './reportWebVitals';
 import Meal from './components/Meal';
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />} errorElement={<Error />}>
       <Route path='' element={<Search />} />
