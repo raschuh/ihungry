@@ -5,6 +5,7 @@ import axios from 'axios';
 import Card from './Card';
 
 import './Search.css';
+import './Cards.css';
 
 function Search() {
   const [ingredients, setIngredients] = useState([]);
@@ -80,6 +81,7 @@ function Search() {
         }
       </ul>
       <h2>Search by a category</h2>
+      <div className='cards-container'>
       {
         categories.map(item => {
           return (
@@ -90,6 +92,7 @@ function Search() {
           );
         })
       }
+      </div>
     </div>
   );
 }

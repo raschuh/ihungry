@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import Card from "./Card";
+import './Cards.css';
 
 function Ingredient() {
   const { name } = useParams();
@@ -24,11 +25,12 @@ function Ingredient() {
     }
 
     getMealsByIngredient();
-  }, []); 
+  }, [name]); 
   
   return (
     <div>
       <h2>{name.replace('_', ' ')}</h2>
+      <div className='cards-container'>
       {
         meals.map(meal => {
           return (
@@ -40,6 +42,7 @@ function Ingredient() {
           );
         })
       }
+      </div>
     </div>
   );
 }

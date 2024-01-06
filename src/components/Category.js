@@ -24,11 +24,12 @@ function Category() {
     }
 
     getItemsByCategory();
-  }, []);
+  }, [name]);
 
   return (
     <div>
       <h2>{name}</h2>
+      <div className='cards-container'>
       {
         meals.map(meal => {
           return (
@@ -40,6 +41,7 @@ function Category() {
           );
         })
       }
+      </div>
     </div>
   );
 }
