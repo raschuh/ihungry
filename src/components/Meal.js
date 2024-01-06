@@ -32,12 +32,12 @@ function Meal() {
     }
 
     getMealById();
-  }, []); 
+  }, [id]); 
 
   return (
     <div>
       <h1>{meal.str}</h1>
-      <img src={meal.image} style={{width: '100%'}}/>
+      <img src={meal.image} alt={meal.str} />
       <h2>Ingredients</h2>
       <ul>
       {

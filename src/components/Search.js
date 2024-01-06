@@ -41,7 +41,7 @@ function Search() {
             str: item['strCategory'],
             image: item['strCategoryThumb']
           }
-        })
+        }).sort((a, b) => a.str > b.str)
       );
     }
 
@@ -73,8 +73,13 @@ function Search() {
         {
           filteredData.map(item => {
             return (
-              <li key={item.id}>
-                <Link to={`/ingredient/${item.str.replace(' ', '_')}`}>{item.str}</Link>
+              <li key={item.id} className='search-link-spacing search-link-styling'>
+                <Link 
+                  to={`/ingredient/${item.str.replace(' ', '_')}`}
+                  className='search-link-text-decor'
+                >
+                  {item.str}
+                </Link>
               </li>
             );
           })
@@ -86,6 +91,7 @@ function Search() {
         categories.map(item => {
           return (
             <Card 
+              key={item.str}
               to={`/category/${item.str}`}
               item={item}
             />

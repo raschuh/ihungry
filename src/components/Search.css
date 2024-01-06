@@ -7,6 +7,18 @@
   overflow: scroll;
 }
 
+.search-link-text-decor {
+  color: var(--dark-color);
+}
+
+.search-link-spacing {
+  margin: 15px 0;
+}
+
+.search-link-styling {
+  list-style: none;
+}
+
 .search-bar {
   width: 100%;
   padding: 10px;
