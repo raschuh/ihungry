@@ -61,7 +61,7 @@ function Search() {
 
   return (
     <div className='search-container'>
-      <h2>Search by an ingredient</h2>
+      <h2>Search by Ingredient</h2>
       <input 
         type='text' 
         placeholder='Search by ingredients...' 
@@ -80,7 +80,7 @@ function Search() {
           })
         }
       </ul>
-      <h2>Search by a category</h2>
+      <h2>Search by Category</h2>
       <div className='cards-container'>
       {
         categories.map(item => {

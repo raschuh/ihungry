@@ -29,7 +29,7 @@ function Ingredient() {
   
   return (
     <div>
-      <h2>{name.replace('_', ' ')}</h2>
+      <h1>{name.replace('_', ' ')}</h1>
       <div className='cards-container'>
       {
         meals.map(meal => {

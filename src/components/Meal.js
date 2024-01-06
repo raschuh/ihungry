@@ -36,15 +36,15 @@ function Meal() {
 
   return (
     <div>
-      <h2>{meal.str}</h2>
+      <h1>{meal.str}</h1>
       <img src={meal.image} style={{width: '100%'}}/>
-      <h3>Ingredients</h3>
+      <h2>Ingredients</h2>
       <ul>
       {
         meal.ingredients?.map(ingredient => <li>{ingredient}</li>)
       }
       </ul>
-      <h3>Instructions</h3>
+      <h2>Instructions</h2>
       {
         meal.instructions?.map(step => <p>{step}</p>)
       }
