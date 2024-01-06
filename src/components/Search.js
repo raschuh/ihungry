@@ -64,7 +64,7 @@ function Search() {
       <h2>Search by Ingredient</h2>
       <input 
         type='text' 
-        placeholder='Search by ingredients...' 
+        placeholder='Type an ingredient here...' 
         value={searchTerm} 
         onChange={handleSearch}
         className='search-bar'
