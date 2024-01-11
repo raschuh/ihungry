@@ -35,7 +35,7 @@ function Meal() {
   }, [id]); 
 
   return (
-    <div>
+    <div className='text-lg'>
       <h1>{meal.str}</h1>
       <img src={meal.image} alt={meal.str} />
       <h2>Ingredients</h2>
