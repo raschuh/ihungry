@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 function Meal() {
   const { id } = useParams();
@@ -39,7 +39,7 @@ function Meal() {
       <h1>{meal.str}</h1>
       <img src={meal.image} alt={meal.str} />
       <h2>Ingredients</h2>
-      <ul>
+      <ul className='list-disc list-inside'>
       {
         meal.ingredients?.map(ingredient => <li>{ingredient}</li>)
       }

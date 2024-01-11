@@ -4,9 +4,6 @@ import axios from 'axios';
 
 import Card from './Card';
 
-import './Search.css';
-import './Cards.css';
-
 function Search() {
   const [ingredients, setIngredients] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -60,23 +57,22 @@ function Search() {
   };
 
   return (
-    <div className='search-container'>
+    <div>
       <h2>Search by Ingredient</h2>
       <input 
         type='text' 
         placeholder='Type an ingredient here...' 
         value={searchTerm} 
         onChange={handleSearch}
-        className='search-bar'
+        className='bg-white border w-full p-2 mb-2'
       />
-      <ul className='search-results'>
+      <ul className='max-h-40 overflow-scroll'>
         {
           filteredData.map(item => {
             return (
-              <li key={item.id} className='search-link-spacing search-link-styling'>
+              <li key={item.id}>
                 <Link 
                   to={`/ingredient/${item.str.replace(' ', '_')}`}
-                  className='search-link-text-decor'
                 >
                   {item.str}
                 </Link>
@@ -86,7 +82,7 @@ function Search() {
         }
       </ul>
       <h2>Search by Category</h2>
-      <div className='cards-container'>
+      <div className='grid grid-cols-2 gap-2'>
       {
         categories.map(item => {
           return (

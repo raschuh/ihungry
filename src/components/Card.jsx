@@ -1,15 +1,13 @@
-import { Link } from "react-router-dom";
-
-import './Card.css';
+import { Link } from 'react-router-dom';
 
 function Card({ to, item }) {
   return (
-    <Link to={to} className='card-title-nounderline'>
-      <div className='card-container'>
-      <img src={item.image} alt={item.str} className='card-image' />
-      <div className='card-title'>
-        <h3>{item.str}</h3>
-      </div>
+    <Link to={to}>
+      <div className='flex flex-col border border-slate-400 shadow-lg'>
+        <img src={item.image} alt={item.str} />
+        <div className='bg-dark text-light text-center'>
+          <h3>{item.str}</h3>
+        </div>
       </div>
     </Link>
   );
