@@ -90,6 +90,7 @@ function Search() {
               key={item.str}
               to={`/category/${item.str}`}
               item={item}
+              preview={false}
             />
           );
         })

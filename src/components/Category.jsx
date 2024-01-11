@@ -37,6 +37,7 @@ function Category() {
               key={meal.id}
               to={`/meal/${meal.id}`}
               item={meal}
+              preview={true}
             />
           );
         })
