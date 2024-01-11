@@ -17,6 +17,7 @@ function App() {
         <Route path='/category/:name' element={<Category />} />
         <Route path='/ingredient/:name' element={<Ingredient />} />
         <Route path='/meal/:id' element={<Meal />} />
+        <Route path='*' element={<Error />} />
       </Routes>
       </main>
       <Footer />
