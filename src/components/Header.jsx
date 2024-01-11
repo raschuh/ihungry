@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 
-import "./Header.css"
-
 function Header() {
   return (
-    <header className='header-banner'>
-      <div className='header-body-container'>
-        <Link to='/' className='header-link'>
-          <h1 className='header-title'>i<span className='header-span-title'>hungry</span></h1>
+    <header className='py-2 mb-6 text-center bg-dark'>
+      <div>
+        <Link to='/'>
+          <h1 className='text-light'>
+            i<span className='uppercase text-accent'>hungry</span>
+          </h1>
         </Link>
       </div>
     </header>

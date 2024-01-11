@@ -29,7 +29,7 @@ function Category() {
   return (
     <div>
       <h1>{name}</h1>
-      <div className='cards-container'>
+      <div className='grid grid-cols-2 gap-2'>
       {
         meals.map(meal => {
           return (
