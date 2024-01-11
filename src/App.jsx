@@ -7,13 +7,11 @@ import Category from './components/Category';
 import Ingredient from './components/Ingredient';
 import Meal from './components/Meal';
 
-import './App.css';
-
 function App() {
   return (
     <HashRouter>
       <Header />
-      <main className='app-main-container'>
+      <main className='max-w-lg mx-auto px-3'>
       <Routes>
         <Route path='/' element={<Search />} />
         <Route path='/category/:name' element={<Category />} />

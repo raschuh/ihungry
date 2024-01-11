@@ -1,6 +1,23 @@
 @layer base {
   html {
-    font-family: 'Nunito', Arial, sans-serif
+    font-family: 'Nunito', Arial, sans-serif;
+  }
+
+  body {
+    @apply text-dark;
+  }
+
+  h1, h2 {
+    @apply font-bold;
+    @apply my-4;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
   }
 }
 
