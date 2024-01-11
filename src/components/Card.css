@@ -1,0 +1,35 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  padding: 0;
+}
+
+.card-container {
+  border: 1px solid var(--dark-color);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  max-width: 100%;
+}
+
+.card-title {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+.card-title {
+  width: 100%;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-title-nounderline {
+  text-decoration: none;
+}
