@@ -23,7 +23,7 @@ function App() {
       </main>
       <Footer />
     </HashRouter>
-  );
+  )
 }
 
-export default App;
+export default App
