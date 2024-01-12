@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import Card from './Card';
+import Categories from './Categories';
 
 function Search() {
   const [ingredients, setIngredients] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredData, setFilteredData] = useState(ingredients);
 
@@ -25,24 +24,6 @@ function Search() {
     }
 
     getIngredients();
-  }, []);
-
-  useEffect(() => {
-    async function getCategories() {
-      const response = await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php');
-      const categories = response.data['categories'];
-      setCategories(
-        categories.map(item => {
-          return {
-            id: item['idCategory'],
-            str: item['strCategory'],
-            image: item['strCategoryThumb']
-          }
-        }).sort((a, b) => a.str > b.str)
-      );
-    }
-
-    getCategories();
   }, []);
 
   const handleSearch = (event) => {
@@ -82,20 +63,7 @@ function Search() {
         }
       </ul>
       <h2>Search by Category</h2>
-      <div className='grid grid-cols-2 gap-2'>
-      {
-        categories.map(item => {
-          return (
-            <Card 
-              key={item.str}
-              to={`/category/${item.str}`}
-              item={item}
-              preview={false}
-            />
-          );
-        })
-      }
-      </div>
+      <Categories />
     </div>
   );
 }
