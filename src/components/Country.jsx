@@ -28,7 +28,7 @@ function Country() {
 
   return (
     <div>
-      <h1>{name}</h1>
+      <h1>{name} Cuisine</h1>
       <div className='grid grid-cols-2 gap-2'>
       {
         meals.map(meal => {
