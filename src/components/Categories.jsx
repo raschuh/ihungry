@@ -22,7 +22,7 @@ function Categories() {
     }
 
     getCategories();
-  }, [list]);
+  }, []);
 
   return (
     <div className='grid grid-cols-2 gap-2'>

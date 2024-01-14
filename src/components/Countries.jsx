@@ -53,14 +53,15 @@ function Countries() {
     }
 
     getCountries();
-  }, [countries]);
+  }, []);
 
   return (
     <div className='grid grid-cols-2'>
     {
       countries.map(country => {
         return (
-          <Link 
+          <Link
+            key={country.areaName} 
             to={`/area/${country.areaName}`}
             className='w-16 self-center flex flex-row items-center'
           >
