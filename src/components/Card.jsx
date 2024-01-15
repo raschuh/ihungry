@@ -12,10 +12,10 @@ function Card({ to, item, preview }) {
 
   return (
     <Link to={to}>
-      <div className='bg-dark flex flex-col border border-slate-400 shadow-lg relative'>
-        <img src={imgSrc} alt={item.str} onError={cannotLoadPreview} className='bg-light mb-14' />
-        <div className='bg-dark text-light text-center px-2 w-full absolute bottom-0'>
-          <h3>{item.str}</h3>
+      <div className='flex flex-col border border-slate-400 relative shadow-lg'>
+        <img src={imgSrc} alt={item.str} onError={cannotLoadPreview} />
+        <div className='bg-dark text-light text-center p-2 w-full'>
+          <h3 className='m-0'>{item.str}</h3>
         </div>
       </div>
     </Link>

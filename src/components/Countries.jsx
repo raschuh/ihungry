@@ -71,7 +71,7 @@ function Countries() {
                 `https://flagsapi.com/${country.areaCode}/flat/64.png` :
                 '../../asset/unknown_flag.svg'
               }
-              className='p-0 m-0 mr-4'
+              className='p-0 m-0 mr-3'
             />
             <h3 className='m-0'>{ country.areaName }</h3>
           </Link>
