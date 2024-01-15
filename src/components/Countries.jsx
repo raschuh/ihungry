@@ -1,6 +1,8 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+import worldFlag from '/unknown_flag.svg'
 
 const countryCodes = {
   'American': 'US',
@@ -69,7 +71,7 @@ function Countries() {
               src={
                 country.areaCode !== UNKNOWN_CODE ? 
                 `https://flagsapi.com/${country.areaCode}/flat/64.png` :
-                '../../asset/unknown_flag.svg'
+                worldFlag
               }
               className='p-0 m-0 mr-3'
             />
