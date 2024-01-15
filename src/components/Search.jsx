@@ -1,18 +1,44 @@
+import { useState } from 'react';
+
 import IngredientSearch from './IngredientSearch';
 import Categories from './Categories';
 import Countries from './Countries';
 
 function Search() {
-  return (
-    <div>
-      <h2>Search by Ingredient</h2>
-      <IngredientSearch />
+  const navStates = ['Category', 'Country', 'Ingredient'];
+  const [currentNavState, setCurrentNavState] = useState(navStates[0]);
 
-      <h2>Search by Category</h2>
-      <Categories />
-      
-      <h2>Search by Country</h2>
-      <Countries />
+  const handleNavSelect = event => {
+    setCurrentNavState(event.target.textContent);
+  };
+
+  const selectNavView = () => {
+    switch (currentNavState) {
+      case 'Category': return <Categories />
+      case 'Country': return <Countries />
+      case 'Ingredient': return <IngredientSearch />
+    }
+  };
+ 
+  return (
+    <div className='w-full'>
+      <ul className='flex flex-row gap-1 justify-center mb-6' >
+      {
+        navStates.map(state => {
+          return (
+            <li 
+              onClick={handleNavSelect}
+              className={`border border-dark p-2 ${
+                state === currentNavState ? 'bg-dark text-light' : ''
+              }`}
+            >
+              {state}
+            </li>
+          )
+        })
+      }
+      </ul>
+      {selectNavView()}
     </div>
   );
 }
