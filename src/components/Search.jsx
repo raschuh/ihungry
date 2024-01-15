@@ -21,7 +21,7 @@ function Search() {
   };
  
   return (
-    <div className='w-full'>
+    <div>
       <ul className='flex flex-row gap-1 justify-center mb-6' >
       {
         navStates.map(state => {
