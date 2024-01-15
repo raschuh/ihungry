@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import worldFlag from '/unknown_flag.svg'
+import worldFlag from '../assets/unknown_flag.svg'
 
 const countryCodes = {
   'American': 'US',
